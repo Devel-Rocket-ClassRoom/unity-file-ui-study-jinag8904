@@ -44,10 +44,38 @@ public class FileStream2 : MonoBehaviour
                     int b;
                     while ((b = fs1.ReadByte()) != -1)
                     {
-                        fs2.WriteByte(b ^ "0xAB");
+                        fs2.WriteByte((byte)(b ^ 0xAB));
+                    }
+
+                    Debug.Log($"암호화 완료 (파일 크기: {fs2.Length} bytes)");
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            using (FileStream fs1 = File.OpenRead(Path.Combine(DirPath, "encrypted.dat")))
+            {
+                using (FileStream fs2 = File.OpenWrite(Path.Combine(DirPath, "decrypted.txt")))
+                {
+                    int b;
+                    while ((b = fs1.ReadByte()) != -1)
+                    {
+                        fs2.WriteByte((byte)(b ^ 0xAB));
                     }
                 }
             }
+
+            Debug.Log("복호화 완료");
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))    // 최종 출력
+        {
+            var decrypted = File.ReadAllText(Path.Combine(DirPath, "decrypted.txt"));
+            var original = File.ReadAllText(Path.Combine(DirPath, "secret.txt"));
+
+            Debug.Log($"복호화 결과: {decrypted}");
+            Debug.Log($"원본과 일치 여부: {decrypted == original}");
         }
     }
 }
