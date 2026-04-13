@@ -6,6 +6,18 @@ public class StringTableText : MonoBehaviour
     public string id;
     public TextMeshProUGUI text;
 
+    public LocalizationText localizationText;
+
+    private void OnEnable()
+    {
+        localizationText.OnLanguageChanged += OnChangedId;        
+    }
+
+    private void OnDisable()
+    {
+        localizationText.OnLanguageChanged -= OnChangedId;
+    }
+
     private void OnValidate()
     {
         OnChangedId();

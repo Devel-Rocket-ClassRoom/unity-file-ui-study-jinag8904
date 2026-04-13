@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.75, g: 1, b: 0.94935447, a: 1}
+  m_Color: {r: 0.7877358, g: 1, b: 0.95688385, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3058\u3083\u306D"
+  m_text: "\uC798\uAC00"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -1152,6 +1152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StringTableText
   id: BYE
   text: {fileID: 1825030041}
+  localizationText: {fileID: 2089977545}
 --- !u!1 &1945158617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +1475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StringTableText
   id: HELLO
   text: {fileID: 2061857661}
+  localizationText: {fileID: 2089977545}
 --- !u!114 &2061857661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,7 +1496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3053\u3093\u306B\u3061\u306F"
+  m_text: "\uC548\uB155"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -1647,9 +1649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564705bd408fe384daf7efd8c1b6d17a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationText
-  text1: {fileID: 2061857660}
-  text2: {fileID: 1825030043}
-  language: 2
+  language: 0
 --- !u!1 &2096114300
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,11 +1,16 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public class LocalizationText: MonoBehaviour
 {
-    public StringTableText text1;
-    public StringTableText text2;
+    public event Action OnLanguageChanged;
     public Languages language;
+
+    private void OnEnable()
+    {
+        ChangeLanguage();
+    }
 
     private void OnValidate()
     {
@@ -36,12 +41,6 @@ public class LocalizationText: MonoBehaviour
     private void ChangeLanguage()
     {
         Variables.Language = language;
-        UpdateText();
-    }
-
-    private void UpdateText()
-    {
-        text1.OnChangedId();
-        text2.OnChangedId();
+        OnLanguageChanged?.Invoke();
     }
 }

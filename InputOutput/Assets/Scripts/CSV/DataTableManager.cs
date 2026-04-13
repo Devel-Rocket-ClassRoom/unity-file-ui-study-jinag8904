@@ -18,7 +18,6 @@ public static class DataTableManager
         stringTable.Load(DataTableIds.String);
         tables.Add(DataTableIds.String, stringTable);
     }
-
     public static T Get<T>(string id) where T : DataTable
     {
         if (!tables.ContainsKey(id))
