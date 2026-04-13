@@ -10,7 +10,7 @@ public class StringTableText : MonoBehaviour
 
     private void OnEnable()
     {
-        localizationText.OnLanguageChanged += OnChangedId;        
+        localizationText.OnLanguageChanged += OnChangedId;
     }
 
     private void OnDisable()
@@ -20,6 +20,7 @@ public class StringTableText : MonoBehaviour
 
     private void OnValidate()
     {
+        localizationText.OnLanguageChanged += OnChangedId;
         OnChangedId();
     }
 
