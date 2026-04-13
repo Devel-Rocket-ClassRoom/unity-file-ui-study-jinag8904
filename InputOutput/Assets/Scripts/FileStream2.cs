@@ -24,7 +24,7 @@ public class FileStream2 : MonoBehaviour
         }
 
         Directory.CreateDirectory(DirPath);
-        Debug.Log("생성됨");
+        Debug.Log($"생성됨: {DirPath}");
     }
 
     void Update()
@@ -63,10 +63,10 @@ public class FileStream2 : MonoBehaviour
                     {
                         fs2.WriteByte((byte)(b ^ 0xAB));
                     }
+
+                    Debug.Log("복호화 완료");
                 }
             }
-
-            Debug.Log("복호화 완료");
         }
 
         if (Input.GetKeyDown(KeyCode.R))    // 최종 출력
