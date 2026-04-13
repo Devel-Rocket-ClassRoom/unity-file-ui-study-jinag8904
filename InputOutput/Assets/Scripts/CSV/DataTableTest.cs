@@ -10,8 +10,8 @@ public class DataTableTest : MonoBehaviour
 
     public void Korean()
     {
-        table.Load(NameStringTableKr);
-        Debug.Log(table.Get("YOU DIE"));
+        //table.Load(NameStringTableKr);
+        Debug.Log(DataTableManager.StringTable.Get("YOU DIE"));
     }
 
     public void English()
