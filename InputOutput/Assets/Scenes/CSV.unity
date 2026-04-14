@@ -667,7 +667,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC80"
+  m_text: Sword
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -763,7 +763,6 @@ MonoBehaviour:
   text: {fileID: 209406171}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 877056872}
-  itemNameId: Item1Name
   bigText: {fileID: 942705463}
 --- !u!1 &283467143
 GameObject:
@@ -823,7 +822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB9C8\uC57C"
+  m_text: Maya
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -919,9 +918,7 @@ MonoBehaviour:
   text: {fileID: 283467146}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 676014601}
-  characterNameId: Character1Name
   descText: {fileID: 996003261}
-  characterDescId: Character1Desc
 --- !u!1 &402715155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB9C8\uC57C"
+  m_text: Maya
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -1210,7 +1207,6 @@ MonoBehaviour:
   text: {fileID: 430712004}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 633282158}
-  characterNameId: Character1Name
   bigText: {fileID: 283467148}
 --- !u!1 &432491234
 GameObject:
@@ -2579,7 +2575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC80"
+  m_text: Sword
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -2675,7 +2671,6 @@ MonoBehaviour:
   text: {fileID: 942705461}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 678679953}
-  itemNameId: Item1Name
   descText: {fileID: 1814704232}
   itemDescId: Item1Desc
 --- !u!1 &959057572
@@ -2736,7 +2731,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD65C "
+  m_text: Bow
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -2832,7 +2827,6 @@ MonoBehaviour:
   text: {fileID: 959057575}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 864430251}
-  itemNameId: Item3Name
   bigText: {fileID: 942705463}
 --- !u!1 &996003259
 GameObject:
@@ -2891,7 +2885,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uADF8\uB140\uC758 \uC774\uB984\uC740 \uB9C8\uC57C."
+  m_text: 'She is Maya.
+
+    Class: Warrior
+
+    AttackPower: 300
+
+    DefensePower:
+    100'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -3379,7 +3380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBC29\uD328"
+  m_text: Shield
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -3475,7 +3476,6 @@ MonoBehaviour:
   text: {fileID: 1164941672}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 744091716}
-  itemNameId: Item2Name
   bigText: {fileID: 942705463}
 --- !u!1 &1170986210
 GameObject:
@@ -3535,7 +3535,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB85C\uC774\uB4DC"
+  m_text: Loid
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -3631,7 +3631,6 @@ MonoBehaviour:
   text: {fileID: 1170986213}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 1710502672}
-  characterNameId: Character3Name
   bigText: {fileID: 283467148}
 --- !u!1 &1186494251
 GameObject:
@@ -3825,7 +3824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB85C\uBE48"
+  m_text: Robin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -3921,7 +3920,6 @@ MonoBehaviour:
   text: {fileID: 1197440546}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 1546182355}
-  characterNameId: Character2Name
   bigText: {fileID: 283467148}
 --- !u!1 &1377718308
 GameObject:
@@ -3981,7 +3979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC8C\uC77C"
+  m_text: Gale
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -4077,7 +4075,6 @@ MonoBehaviour:
   text: {fileID: 1377718311}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 1747793542}
-  characterNameId: Character4Name
   bigText: {fileID: 283467148}
 --- !u!1 &1546182354
 GameObject:
@@ -4722,7 +4719,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC774\uAC83\uC740 \uAC80\uC774\uB2E4."
+  m_text: This is a sword.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -5147,7 +5144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBB3C\uC57D "
+  m_text: Potion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -5243,7 +5240,6 @@ MonoBehaviour:
   text: {fileID: 1910472498}
   localizationText: {fileID: 2089977545}
   Icon: {fileID: 188359968}
-  itemNameId: Item4Name
   bigText: {fileID: 942705463}
 --- !u!1 &1945158617
 GameObject:
@@ -5741,7 +5737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564705bd408fe384daf7efd8c1b6d17a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationText
-  language: 0
+  language: 1
 --- !u!1 &2096114300
 GameObject:
   m_ObjectHideFlags: 0

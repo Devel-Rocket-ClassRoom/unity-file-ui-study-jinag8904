@@ -31,6 +31,6 @@ public class StringTableText : MonoBehaviour
 
     public virtual void OnChangedId()
     {
-        //text.text = DataTableManager.StringTable.Get(itemNameId);
+
     }
 }

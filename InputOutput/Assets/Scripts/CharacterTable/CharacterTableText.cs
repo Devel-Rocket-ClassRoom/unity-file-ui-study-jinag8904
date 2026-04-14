@@ -3,7 +3,7 @@ using UnityEngine.UI;
 public class CharacterTableText : StringTableText
 {
     public Image Icon;
-    public string characterNameId;
+    protected string characterNameId;
 
     public override void OnValidate()
     {

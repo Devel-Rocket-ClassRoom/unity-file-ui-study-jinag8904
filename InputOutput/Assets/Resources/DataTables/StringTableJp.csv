@@ -18,3 +18,9 @@ Character1Desc,彼女の名前はマヤ。
 Character2Desc,彼女の名前はロビン。
 Character3Desc,彼の名前はロイド。
 Character4Desc,彼の名前はゲイル。
+AP,攻撃力
+DP,防御力
+Class,クラス
+Warrior,転写
+Archer,射手
+Healer,ヒーラー

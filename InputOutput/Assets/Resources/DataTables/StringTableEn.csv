@@ -18,3 +18,9 @@ Character1Desc,She is Maya.
 Character2Desc,She is Robin.
 Character3Desc,He is Loid.
 Character4Desc,He is Gale.
+AP,Attack Power
+DP,Defense Power
+Class,Class
+Warrior,Warrior
+Archer,Archer
+Healer,Healer

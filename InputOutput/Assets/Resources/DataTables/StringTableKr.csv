@@ -18,3 +18,9 @@ Character1Desc,그녀의 이름은 마야.
 Character2Desc,그녀의 이름은 로빈.
 Character3Desc,그의 이름은 로이드.
 Character4Desc,그의 이름은 게일.
+AP,공격력
+DP,방어력
+Class,클래스
+Warrior,전사
+Archer,궁수
+Healer,치유사
