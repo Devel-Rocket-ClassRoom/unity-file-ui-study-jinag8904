@@ -5,9 +5,7 @@ public class StringTableText : MonoBehaviour
 {    
     public string id;
     public string itemNameId;
-
     public TextMeshProUGUI text;
-
     public LocalizationText localizationText;
 
     private void OnEnable()

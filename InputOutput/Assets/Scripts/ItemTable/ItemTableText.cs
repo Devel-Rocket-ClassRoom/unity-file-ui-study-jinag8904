@@ -7,6 +7,7 @@ public class ItemTableText : StringTableText
 
     public override void OnValidate()
     {
+        localizationText.OnLanguageChanged += OnChangedId;
         OnChangedId();
     }
 
