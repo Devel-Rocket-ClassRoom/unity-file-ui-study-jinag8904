@@ -1,9 +1,9 @@
-using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemTableText : StringTableText
 {
     public Image Icon;
+    public string itemNameId;
 
     public override void OnValidate()
     {
@@ -19,7 +19,7 @@ public class ItemTableText : StringTableText
         Icon.sprite = data.SpriteIcon;
         itemNameId = data.Name;
 
-        base.OnChangedId();
+        text.text = DataTableManager.StringTable.Get(itemNameId);
     }
 
     public void SetEmpty()

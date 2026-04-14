@@ -2,9 +2,9 @@ using UnityEngine;
 using TMPro;
 
 public class StringTableText : MonoBehaviour
-{    
+{
     public string id;
-    public string itemNameId;
+
     public TextMeshProUGUI text;
     public LocalizationText localizationText;
 
@@ -31,6 +31,6 @@ public class StringTableText : MonoBehaviour
 
     public virtual void OnChangedId()
     {
-        text.text = DataTableManager.StringTable.Get(itemNameId);
+        //text.text = DataTableManager.StringTable.Get(itemNameId);
     }
 }

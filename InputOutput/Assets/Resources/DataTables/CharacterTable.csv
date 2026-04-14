@@ -1,0 +1,5 @@
+﻿Id,Class,Name,Desc,AttackPower,DefensePower,Icon
+Character1,Warrior,Character1Name,Character1Desc,300,100,Icon_Sword06
+Character2,Archer,Character2Name,Character2Desc,200,200,Icon_Bow01
+Character3,Healer,Character3Name,Character3Desc,100,300,Icon_Heart03
+Character4,Archer,Character4Name,Character4Desc,200,200,Icon_Bow02

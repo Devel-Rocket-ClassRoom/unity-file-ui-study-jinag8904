@@ -7,6 +7,7 @@ public static class DataTableManager
 
     public static StringTable StringTable => Get<StringTable>(DataTableIds.String);
     public static ItemTable ItemTable => Get<ItemTable>(DataTableIds.Item);
+    public static CharacterTable CharacterTable => Get<CharacterTable>(DataTableIds.Character);
 
     static DataTableManager()
     {
@@ -15,6 +16,10 @@ public static class DataTableManager
         var itemTable = new ItemTable();
         itemTable.Load(DataTableIds.Item);
         tables.Add(DataTableIds.Item, itemTable);
+
+        var characterTable = new CharacterTable();
+        characterTable.Load(DataTableIds.Character);
+        tables.Add(DataTableIds.Character, characterTable);
     }
 
     private static void Init()
