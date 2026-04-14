@@ -544,7 +544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item1Name
+  m_text: "\uAC80"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -637,9 +637,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemTableTextSmall
   id: Item1
-  Icon: {fileID: 877056872}
-  localizationText: {fileID: 2089977545}
+  itemNameId: Item1Name
   text: {fileID: 209406171}
+  localizationText: {fileID: 2089977545}
+  Icon: {fileID: 877056872}
   bigText: {fileID: 942705463}
 --- !u!1 &456378585
 GameObject:
@@ -1047,7 +1048,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7851dab76f8bf0c4c9c8d9a650e732c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b96751c9b5b151e489df76488636e8d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1226,7 +1227,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1164941674}
         m_TargetAssemblyTypeName: ItemTableTextSmall, Assembly-CSharp
-        m_MethodName: UpdateBigItem
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1723,7 +1724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item4Name
+  m_text: Sword
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -1815,11 +1816,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1154f1ccb7c8698409a8b407ebfa07c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemTableTextBig
-  id: Item4
-  Icon: {fileID: 678679953}
-  localizationText: {fileID: 2089977545}
+  id: Item1
+  itemNameId: Item1Name
   text: {fileID: 942705461}
+  localizationText: {fileID: 2089977545}
+  Icon: {fileID: 678679953}
   descText: {fileID: 1814704232}
+  itemDescId: Item1Desc
 --- !u!1 &959057572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,7 +1881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item3Name
+  m_text: Bow
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -1971,9 +1974,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemTableTextSmall
   id: Item3
-  Icon: {fileID: 864430251}
+  itemNameId: Item3Name
+  text: {fileID: 959057575}
   localizationText: {fileID: 2089977545}
-  text: {fileID: 1910472498}
+  Icon: {fileID: 864430251}
   bigText: {fileID: 942705463}
 --- !u!1 &1071107054
 GameObject:
@@ -2249,7 +2253,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item2Name
+  m_text: Shield
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -2342,9 +2346,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemTableTextSmall
   id: Item2
-  Icon: {fileID: 744091716}
-  localizationText: {fileID: 2089977545}
+  itemNameId: Item2Name
   text: {fileID: 1164941672}
+  localizationText: {fileID: 2089977545}
+  Icon: {fileID: 744091716}
   bigText: {fileID: 942705463}
 --- !u!1 &1186494251
 GameObject:
@@ -2432,7 +2437,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 209406173}
         m_TargetAssemblyTypeName: ItemTableTextSmall, Assembly-CSharp
-        m_MethodName: UpdateBigItem
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2566,7 +2571,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 959057577}
         m_TargetAssemblyTypeName: ItemTableTextSmall, Assembly-CSharp
-        m_MethodName: UpdateBigItem
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2671,7 +2676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item4Desc
+  m_text: This is a sword.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -2837,7 +2842,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1910472500}
         m_TargetAssemblyTypeName: ItemTableTextSmall, Assembly-CSharp
-        m_MethodName: UpdateBigItem
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2943,7 +2948,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC798\uAC00"
+  m_text: "\uD0A4 \uC5C6\uC74C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -3036,6 +3041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StringTableText
   id: BYE
+  itemNameId: 
   text: {fileID: 1825030041}
   localizationText: {fileID: 2089977545}
 --- !u!1 &1910472495
@@ -3096,7 +3102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item4Name
+  m_text: Potion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -3189,9 +3195,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemTableTextSmall
   id: Item4
-  Icon: {fileID: 188359968}
-  localizationText: {fileID: 2089977545}
+  itemNameId: Item4Name
   text: {fileID: 1910472498}
+  localizationText: {fileID: 2089977545}
+  Icon: {fileID: 188359968}
   bigText: {fileID: 942705463}
 --- !u!1 &1945158617
 GameObject:
@@ -3514,6 +3521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StringTableText
   id: HELLO
+  itemNameId: 
   text: {fileID: 2061857661}
   localizationText: {fileID: 2089977545}
 --- !u!114 &2061857661
@@ -3536,7 +3544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC548\uB155"
+  m_text: "\uD0A4 \uC5C6\uC74C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}

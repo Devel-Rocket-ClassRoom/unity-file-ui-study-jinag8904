@@ -4,6 +4,8 @@ using TMPro;
 public class StringTableText : MonoBehaviour
 {    
     public string id;
+    public string itemNameId;
+
     public TextMeshProUGUI text;
 
     public LocalizationText localizationText;
@@ -18,7 +20,7 @@ public class StringTableText : MonoBehaviour
         localizationText.OnLanguageChanged -= OnChangedId;
     }
 
-    private void OnValidate()
+    public virtual void OnValidate()
     {
         localizationText.OnLanguageChanged += OnChangedId;
         OnChangedId();
@@ -29,8 +31,8 @@ public class StringTableText : MonoBehaviour
         OnChangedId();
     }
 
-    public void OnChangedId()
+    public virtual void OnChangedId()
     {
-        text.text = DataTableManager.StringTable.Get(id);
+        text.text = DataTableManager.StringTable.Get(itemNameId);
     }
 }

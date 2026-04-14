@@ -5,14 +5,16 @@ using UnityEngine.UI;
 public class ItemTableTextBig : ItemTableText
 {
     public TextMeshProUGUI descText;
+    public string itemDescId;
 
     public override void OnChangedId()
     {
         base.OnChangedId();
-        descText.text = DataTableManager.ItemTable.Get(id).Desc;
+        itemDescId = DataTableManager.ItemTable.Get(id).Desc;
+        descText.text = DataTableManager.StringTable.Get(itemDescId);
     }
 
-    public void UpdateItem(string id)
+    public void SetData(string id)
     {
         this.id = id;
         OnChangedId();

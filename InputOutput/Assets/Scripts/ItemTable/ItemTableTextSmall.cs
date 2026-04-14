@@ -6,8 +6,8 @@ public class ItemTableTextSmall : ItemTableText
 {
     public ItemTableTextBig bigText;
 
-    public void UpdateBigItem()
+    public void OnClick()
     {
-        bigText.UpdateItem(id);
+        bigText.SetData(id);
     }
 }
