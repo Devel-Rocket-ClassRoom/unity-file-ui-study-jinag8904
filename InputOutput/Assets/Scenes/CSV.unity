@@ -5086,7 +5086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b51233c56944748aab576a93990a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StringTableText
-  id: BYE
+  id: 
   text: {fileID: 1825030041}
   localizationText: {fileID: 2089977545}
 --- !u!1 &1910472495
@@ -5565,7 +5565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b51233c56944748aab576a93990a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StringTableText
-  id: HELLO
+  id: 
   text: {fileID: 2061857661}
   localizationText: {fileID: 2089977545}
 --- !u!114 &2061857661
