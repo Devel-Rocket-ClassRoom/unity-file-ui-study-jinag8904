@@ -73,8 +73,8 @@ public class ObjectSaveLoad: MonoBehaviour
     {
         Clear();
 
-        var jsons = File.ReadAllText(FileFullPath);
-        var loadObj = JsonConvert.DeserializeObject<List<ObjectSave>>(jsons, jsonSettings);
+        var json = File.ReadAllText(FileFullPath);
+        var loadObj = JsonConvert.DeserializeObject<List<ObjectSave>>(json, jsonSettings);
 
         for (int i = 0; i < loadObj.Count; i++)
         {
