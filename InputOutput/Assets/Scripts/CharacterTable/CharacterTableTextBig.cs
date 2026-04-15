@@ -16,11 +16,11 @@ public class CharacterTableTextBig : CharacterTableText
     {
         base.OnChangedId();
 
-        characterDescId = DataTableManager.CharacterTable.Get(id).Desc;
-        characterClassId = DataTableManager.CharacterTable.Get(id).Class.ToString();
-
-        characterAP = DataTableManager.CharacterTable.Get(id).AttackPower;
-        characterDP = DataTableManager.CharacterTable.Get(id).DefensePower;
+        var characterData = DataTableManager.CharacterTable.Get(id);
+        characterDescId = characterData.Desc;
+        characterClassId = characterData.Class.ToString();
+        characterAP = characterData.AttackPower;
+        characterDP = characterData.DefensePower;
 
         StringBuilder sb = new();
         var stringData = DataTableManager.StringTable;
