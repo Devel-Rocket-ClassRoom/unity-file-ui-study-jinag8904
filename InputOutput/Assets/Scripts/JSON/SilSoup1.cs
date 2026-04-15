@@ -94,14 +94,17 @@ public class SilSoup1 : MonoBehaviour
 
     public void Create()
     {
-        System.Random rand = new();
-        var newObj = GameObject.CreatePrimitive((PrimitiveType)rand.Next(0, 4));
-        newObj.transform.position = new Vector3(rand.Next(-10, 11), rand.Next(-3, 4), transform.position.z);
-        newObj.transform.rotation = UnityEngine.Random.rotation;
-        newObj.transform.localScale = Vector3.one * UnityEngine.Random.Range(0.5f, 3f);
-        newObj.GetComponent<Renderer>().material.color = UnityEngine.Random.ColorHSV();
+        for (int i = 0; i < 10; i++)    // 10개씩
+        {
+            System.Random rand = new();
+            var newObj = GameObject.CreatePrimitive((PrimitiveType)rand.Next(0, 4));
+            newObj.transform.position = new Vector3(rand.Next(-10, 11), rand.Next(-3, 4), transform.position.z);
+            newObj.transform.rotation = UnityEngine.Random.rotation;
+            newObj.transform.localScale = Vector3.one * UnityEngine.Random.Range(0.5f, 3f);
+            newObj.GetComponent<Renderer>().material.color = UnityEngine.Random.ColorHSV();
 
-        objects.Add(newObj);
+            objects.Add(newObj);
+        }
     }
 
     public void Clear()
