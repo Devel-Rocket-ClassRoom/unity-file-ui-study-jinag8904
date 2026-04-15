@@ -2,8 +2,6 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [Serializable]
@@ -99,6 +97,9 @@ public class SilSoup1 : MonoBehaviour
         System.Random rand = new();
         var newObj = GameObject.CreatePrimitive((PrimitiveType)rand.Next(0, 4));
         newObj.transform.position = new Vector3(rand.Next(-10, 11), rand.Next(-3, 4), transform.position.z);
+        newObj.transform.rotation = UnityEngine.Random.rotation;
+        newObj.transform.localScale = Vector3.one * UnityEngine.Random.Range(0.5f, 3f);
+        newObj.GetComponent<Renderer>().material.color = UnityEngine.Random.ColorHSV();
 
         objects.Add(newObj);
     }
@@ -107,7 +108,6 @@ public class SilSoup1 : MonoBehaviour
     {
         foreach (var obj in objects)
         {
-            Debug.Log($"삭제: {obj.name}");
             Destroy(obj);
         }
 
