@@ -27,7 +27,7 @@ public class ObjectSave
     public override string ToString() => $"{type} / {pos} / {rot} / {scale} / {color}";
 }
 
-public class SilSoup1 : MonoBehaviour
+public class ObjectSaveLoad: MonoBehaviour
 {
     public List<GameObject> objects;
 
@@ -98,7 +98,7 @@ public class SilSoup1 : MonoBehaviour
         {
             System.Random rand = new();
             var newObj = GameObject.CreatePrimitive((PrimitiveType)rand.Next(0, 4));
-            newObj.transform.position = new Vector3(rand.Next(-10, 11), rand.Next(-3, 4), transform.position.z);
+            newObj.transform.position = new Vector3(rand.Next(-10, 11), rand.Next(-3, 4), rand.Next(-3, 4));
             newObj.transform.rotation = UnityEngine.Random.rotation;
             newObj.transform.localScale = Vector3.one * UnityEngine.Random.Range(0.5f, 3f);
             newObj.GetComponent<Renderer>().material.color = UnityEngine.Random.ColorHSV();
