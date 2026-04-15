@@ -78,9 +78,7 @@ public class ObjectSaveLoad: MonoBehaviour
 
         for (int i = 0; i < loadObj.Count; i++)
         {
-            var typeName = loadObj[i].type;
-
-            var obj = GameObject.CreatePrimitive(typeName);
+            var obj = GameObject.CreatePrimitive(loadObj[i].type);
             obj.transform.position = loadObj[i].pos;
             obj.transform.rotation = loadObj[i].rot;
             obj.transform.localScale = loadObj[i].scale;
