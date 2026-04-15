@@ -26,7 +26,7 @@ public class ObjectSave
     public Vector3 scale;
     public Color color;
 
-    public override string ToString() => $"{pos} / {rot} / {scale} / {color}";
+    public override string ToString() => $"{type} / {pos} / {rot} / {scale} / {color}";
 }
 
 public class SilSoup1 : MonoBehaviour
