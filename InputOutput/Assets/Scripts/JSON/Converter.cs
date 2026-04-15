@@ -2,8 +2,6 @@ using System;
 using UnityEngine;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using NUnit.Framework;
-using System.Collections.Generic;
 
 public class Vector3Converter: JsonConverter<Vector3>
 {

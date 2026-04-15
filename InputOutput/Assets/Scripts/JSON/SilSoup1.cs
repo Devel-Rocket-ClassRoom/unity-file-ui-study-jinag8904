@@ -1,8 +1,8 @@
-using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.IO;
+using Newtonsoft.Json;
 using UnityEngine;
+using System.IO;
+using System;
 
 [Serializable]
 public class SomeClass
