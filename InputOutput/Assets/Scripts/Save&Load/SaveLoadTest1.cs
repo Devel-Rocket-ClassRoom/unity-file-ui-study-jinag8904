@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Test1 : MonoBehaviour
+public class SaveLoadTest1 : MonoBehaviour
 {
     public SaveLoadManager.SaveMode saveMode;
 

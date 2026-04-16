@@ -12,18 +12,10 @@ public static class SaveLoadManager
 
     private static readonly string[] SaveFileNames =
     {
-        "SaveAuto.json",
-        "Save1.json",
-        "Save2.json",
-        "Save3.json"
-    };
-
-    private static readonly string[] EncryptedSaveFileNames =
-    {
-        "SaveAuto.dat",
-        "Save1.dat",
-        "Save2.dat",
-        "Save3.dat"
+        "SaveAuto",
+        "Save1",
+        "Save2",
+        "Save3"
     };
 
     public static int SaveDataVersion { get; } = 3;
@@ -35,7 +27,18 @@ public static class SaveLoadManager
         TypeNameHandling = TypeNameHandling.All
     };
 
-    public static bool Save(int slot = 0)
+    private static string GetSaveFilePath(int slot)
+    {
+        return GetSaveFilePath(slot, Mode);
+    }
+
+    private static string GetSaveFilePath(int slot, SaveMode mode)
+    {
+        var ext = mode == SaveMode.Text ? ".json" : ".dat";
+        return Path.Combine(SaveDirPath, $"{SaveFileNames[slot]}{ext}");
+    }
+
+    public static bool Save(int slot, SaveMode mode)
     {
         if (Data == null || slot < 0 || slot >= SaveFileNames.Length)   return false;
 
@@ -43,20 +46,18 @@ public static class SaveLoadManager
         {
             if (!Directory.Exists(SaveDirPath)) Directory.CreateDirectory(SaveDirPath);
 
-            var text = JsonConvert.SerializeObject(Data, settings);
-            string path;
+            var json = JsonConvert.SerializeObject(Data, settings);
+            var path = GetSaveFilePath(0, mode);
 
             switch (Mode)
             {
                 case SaveMode.Text:
-                    path = Path.Combine(SaveDirPath, SaveFileNames[slot]);
-                    File.WriteAllText(path, text);
+                    File.WriteAllText(path, json);
                     Debug.Log(".json 파일 저장 완료");
                     break;
+
                 case SaveMode.Encrypted:
-                    var encrypted = CryptoUtil.Encrypt(text);
-                    path = Path.Combine(SaveDirPath, EncryptedSaveFileNames[slot]);
-                    File.WriteAllBytes(path, encrypted);
+                    File.WriteAllBytes(path, CryptoUtil.Encrypt(json));
                     Debug.Log(".dat 파일 저장 완료");
                     break;
             }
@@ -70,36 +71,31 @@ public static class SaveLoadManager
         }
     }
 
-    public static bool Load(int slot = 0)
+    public static bool Load(int slot, SaveMode mode)
     {
         if (slot < 0 || slot >= SaveFileNames.Length || !Directory.Exists(SaveDirPath)) return false;
 
-        string path = string.Empty;
-        string saveText = string.Empty;
+        string path = GetSaveFilePath(0, mode);
+        if (!File.Exists(path)) return false;
 
         try
         {
+            string json = string.Empty;
+
             switch (Mode)
             {
                 case SaveMode.Text:
-                    path = Path.Combine(SaveDirPath, SaveFileNames[slot]);
-                    if (!File.Exists(path)) return false;
-
-                    saveText = File.ReadAllText(path);
+                    json = File.ReadAllText(path);
                     Debug.Log(".json 파일 로드 완료");
                     break;
 
                 case SaveMode.Encrypted:
-                    path = Path.Combine(SaveDirPath, EncryptedSaveFileNames[slot]);
-                    if (!File.Exists(path)) return false;
-
-                    var encrypted = File.ReadAllBytes(path);
-                    saveText = CryptoUtil.Decrypt(encrypted);
+                    json = CryptoUtil.Decrypt(File.ReadAllBytes(path));
                     Debug.Log(".dat 파일 로드 완료");
                     break;
             }
 
-            var saveData = JsonConvert.DeserializeObject<SaveData>(saveText, settings);
+            var saveData = JsonConvert.DeserializeObject<SaveData>(json, settings);
 
             while (saveData.Version < SaveDataVersion)
             {
