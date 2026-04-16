@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31f8a84620dcb84bbc368a117c71aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Test1
+  saveMode: 1
 --- !u!114 &427706932
 MonoBehaviour:
   m_ObjectHideFlags: 0

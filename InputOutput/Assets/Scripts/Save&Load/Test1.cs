@@ -4,7 +4,7 @@ public class Test1 : MonoBehaviour
 {
     public SaveLoadManager.SaveMode saveMode;
 
-    private void Start()
+    private void OnValidate()
     {
         SaveLoadManager.Mode = saveMode;
     }

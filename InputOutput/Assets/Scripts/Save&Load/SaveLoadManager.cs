@@ -51,12 +51,13 @@ public static class SaveLoadManager
                 case SaveMode.Text:
                     path = Path.Combine(SaveDirPath, SaveFileNames[slot]);
                     File.WriteAllText(path, text);
+                    Debug.Log(".json 파일 저장 완료");
                     break;
                 case SaveMode.Encrypted:
                     var encrypted = CryptoUtil.Encrypt(text);
                     path = Path.Combine(SaveDirPath, EncryptedSaveFileNames[slot]);
                     File.WriteAllBytes(path, encrypted);
-                    Debug.Log("암호화 완료");
+                    Debug.Log(".dat 파일 저장 완료");
                     break;
             }
 
@@ -85,6 +86,7 @@ public static class SaveLoadManager
                     if (!File.Exists(path)) return false;
 
                     saveText = File.ReadAllText(path);
+                    Debug.Log(".json 파일 로드 완료");
                     break;
 
                 case SaveMode.Encrypted:
@@ -93,7 +95,7 @@ public static class SaveLoadManager
 
                     var encrypted = File.ReadAllBytes(path);
                     saveText = CryptoUtil.Decrypt(encrypted);
-                    Debug.Log("복호화 완료");
+                    Debug.Log(".dat 파일 로드 완료");
                     break;
             }
 
