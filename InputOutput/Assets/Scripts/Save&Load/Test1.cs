@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class Test1 : MonoBehaviour
 {
+    public SaveLoadManager.SaveMode saveMode;
+
+    private void Start()
+    {
+        SaveLoadManager.Mode = saveMode;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))   // 현 상태 출력
@@ -18,8 +25,6 @@ public class Test1 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SaveLoadManager.Mode = SaveLoadManager.SaveMode.Encrypted;
-
             SaveLoadManager.Data = new() 
             { 
                 Name = "TEST1234", 
