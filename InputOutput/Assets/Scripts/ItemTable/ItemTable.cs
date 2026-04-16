@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemData
@@ -49,5 +52,14 @@ public class ItemTable : DataTable
         }
 
         return table[id];
+    }
+
+    public string GetRandomId()
+    {
+        System.Random rand = new();
+        int index = rand.Next(table.Count);
+        var randomPair = table.ElementAt(index);
+
+        return randomPair.Key;
     }
 }
