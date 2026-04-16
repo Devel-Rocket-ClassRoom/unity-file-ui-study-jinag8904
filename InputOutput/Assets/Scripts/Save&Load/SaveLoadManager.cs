@@ -38,6 +38,11 @@ public static class SaveLoadManager
         return Path.Combine(SaveDirPath, $"{SaveFileNames[slot]}{ext}");
     }
 
+    public static bool Save(int slot = 0)
+    {
+        return Save(slot, Mode);
+    }
+
     public static bool Save(int slot, SaveMode mode)
     {
         if (Data == null || slot < 0 || slot >= SaveFileNames.Length)   return false;
@@ -69,6 +74,11 @@ public static class SaveLoadManager
             Debug.LogError("Save 예외");
             return false;
         }
+    }
+
+    public static bool Load(int slot = 0)
+    {
+        return Load(slot, Mode);
     }
 
     public static bool Load(int slot, SaveMode mode)
