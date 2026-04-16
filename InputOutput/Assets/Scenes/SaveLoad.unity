@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 427706930}
   - component: {fileID: 427706931}
+  - component: {fileID: 427706932}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -163,6 +164,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31f8a84620dcb84bbc368a117c71aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Test1
+--- !u!114 &427706932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427706929}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ead94fd785c32458a996df02326768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CryptoTest1
 --- !u!1 &957451880
 GameObject:
   m_ObjectHideFlags: 0

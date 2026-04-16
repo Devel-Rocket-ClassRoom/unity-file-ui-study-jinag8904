@@ -18,7 +18,14 @@ public class Test1 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SaveLoadManager.Data = new() { Name = "TEST1234", Gold = 4321, ItemIDs = SaveLoadManager.Data.ItemIDs };
+            SaveLoadManager.Mode = SaveLoadManager.SaveMode.Encrypted;
+
+            SaveLoadManager.Data = new() 
+            { 
+                Name = "TEST1234", 
+                Gold = 4321, 
+                ItemIDs = SaveLoadManager.Data.ItemIDs
+            };
 
             SaveLoadManager.Save();
         }
@@ -37,7 +44,7 @@ public class Test1 : MonoBehaviour
             var itemIDS = SaveLoadManager.Data.ItemIDs;
             for (int i = 0; i < itemIDS.Count; i++)
             {
-                Debug.Log($"{i+1}번 아이템: {DataTableManager.ItemTable.Get(itemIDS[i])}");
+                Debug.Log($"{i+1}번 아이템: {DataTableManager.ItemTable.Get(itemIDS[i]).Name}");
             }
         }
 

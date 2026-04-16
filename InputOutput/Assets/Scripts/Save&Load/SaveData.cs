@@ -45,10 +45,8 @@ public class SaveDataV2 : SaveData
 }
 
 [Serializable]
-public class SaveDataV3 : SaveData
+public class SaveDataV3 : SaveDataV2
 {
-    public string Name { get; set; } = string.Empty;
-    public int Gold = 0;
     public List<string> ItemIDs = new();
 
     public SaveDataV3() => Version = 3;
