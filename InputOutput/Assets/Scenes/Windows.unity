@@ -1091,6 +1091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943580077}
   - component: {fileID: 943580078}
+  - component: {fileID: 943580079}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -1145,6 +1146,26 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &943580079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943580076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.LayoutElement
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: 40
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &1062569903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1341,10 @@ PrefabInstance:
         00
 
         00'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042877368899569477, guid: ba9c64aa8758d264980bb4f4f1227049, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 5042877368899569477, guid: ba9c64aa8758d264980bb4f4f1227049, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -2212,6 +2237,10 @@ PrefabInstance:
         stat 3'
       objectReference: {fileID: 0}
     - target: {fileID: 5042877368899569477, guid: ba9c64aa8758d264980bb4f4f1227049, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042877368899569477, guid: ba9c64aa8758d264980bb4f4f1227049, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
@@ -2672,6 +2701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1821320059}
   - component: {fileID: 1821320060}
+  - component: {fileID: 1821320061}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -2726,6 +2756,26 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1821320061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821320058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.LayoutElement
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: 40
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &2050610457
 GameObject:
   m_ObjectHideFlags: 0
