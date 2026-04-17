@@ -5,6 +5,9 @@ using System.Collections;
 
 public class GameOverWindow : GenericWindow
 {
+    private TextMeshProUGUI[] statsLabels;
+    private TextMeshProUGUI[] statsValues;
+    
     public TextMeshProUGUI leftStatLabel;
     public TextMeshProUGUI leftStatValue;
 
@@ -15,92 +18,85 @@ public class GameOverWindow : GenericWindow
 
     public Button nextButton;
 
+    private float revealDelay = 1f;
     private float revealDuration = 5f;
+    private Coroutine coroutine;
+
+    public int statsCount = 3;
 
     private void Awake()
     {
         nextButton.onClick.AddListener(OnNext);
+
+        statsLabels = new TextMeshProUGUI[] {leftStatLabel, rightStatLabel};
+        statsValues = new TextMeshProUGUI[] {leftStatValue, rightStatValue};
     }
 
     public override void Open()
     {
-        base.Open();
-        leftStatLabel.text = "Stat 1\nStat 2\nStat 3";
-        rightStatLabel.text = "Stat 1\nStat 2\nStat 3";
-
-        // 스탯 차례로 출력 (왼쪽 위부터)
-        System.Random rand = new();
-
-        var leftLabels = leftStatLabel.text.Split("\n");
-        int[] leftScores = new int[] { rand.Next(0, 10000), rand.Next(0, 10000), rand.Next(0, 10000) };
-        var rightLabels = rightStatLabel.text.Split("\n");
-        int[] rightScores = new int[] { rand.Next(0, 10000), rand.Next(0, 10000), rand.Next(0, 10000) };
-        var totalScore = rand.Next(0, 100000000);
-
         leftStatLabel.text = leftStatValue.text = rightStatLabel.text = rightStatValue.text = string.Empty;
-        totalScoreValue.text = $"00000000";
+        totalScoreValue.text = $"{0:D8}";
 
-        StartCoroutine(Co_RevealStats(leftLabels, leftScores, rightLabels, rightScores, totalScore));
-    }
+        var leftScores = new int[statsCount];
+        var rightScores = new int[statsCount];
 
-    IEnumerator Co_RevealStats(string[] leftLabels, int[] leftScores, string[] rightLabels, int[] rightScores, int totalScore)
-    {
-        for (int i = 0; i < leftLabels.Length; i++)
+        for (int i = 0; i < statsCount; i++)
         {
-            yield return new WaitForSeconds(1);
-            leftStatLabel.text += leftLabels[i];
-            leftStatValue.text += $"{leftScores[i]:0000}";
-
-            if (i != leftLabels.Length)
-            {
-                leftStatLabel.text += "\n";
-                leftStatValue.text += "\n";
-            }
+            leftScores[i] = Random.Range(0, 10000);
+            rightScores[i] = Random.Range(0, 10000);
         }
 
-        for (int i = 0; i < rightLabels.Length; i++)
-        {
-            yield return new WaitForSeconds(1);
-            rightStatLabel.text += rightLabels[i];
-            rightStatValue.text += $"{rightScores[i]:0000}";
+        var totalScore = Random.Range(0, 100000000);
+        
+        base.Open();
 
-            if (i != leftLabels.Length)
-            {
-                rightStatLabel.text += "\n";
-                rightStatValue.text += "\n";
-            }
-        }
-
-        StartCoroutine(Co_RevealTotalScore(totalScore));
+        coroutine = StartCoroutine(Co_Reveal(leftScores, rightScores, totalScore));
     }
 
-    IEnumerator Co_RevealTotalScore(int totalScore)
+    IEnumerator Co_Reveal(int[] leftScores, int[] rightScores, int totalScore)
     {
-        Debug.Log(totalScore);
-
-        yield return new WaitForSeconds(1);
-
-        var currentScore = 0f;
-        var elapsedTime = 0f;
-
-        while (currentScore < totalScore)    // 현재 점수가 총점과 같을 때까지 (다른 동안)
+        for (int i = 0; i < statsCount; i++)
         {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / revealDuration;
+            yield return new WaitForSeconds(revealDelay);
 
-            currentScore = Mathf.Lerp(currentScore, totalScore, t);
-            
-            totalScoreValue.text = $"{currentScore:00000000}";
+            string newLine = (i == 0) ? string.Empty : "\n";
+
+            leftStatLabel.text = $"{leftStatLabel.text}{newLine}Stat {i}";
+            leftStatValue.text = $"{leftStatValue.text}{newLine}{leftScores[i]:D4}";
+        }
+
+        for (int i = 0; i < statsCount; i++)
+        {
+            yield return new WaitForSeconds(revealDelay);
+
+            string newLine = (i == 0) ? string.Empty : "\n";
+
+            rightStatLabel.text = $"{rightStatLabel.text}{newLine}Stat {i}";
+            rightStatValue.text = $"{rightStatValue.text}{newLine}{rightScores[i]:D4}";
+        }
+
+        yield return new WaitForSeconds(revealDelay);
+
+        float t = 0f;
+
+        while (t < 1f)
+        {
+            t += Time.deltaTime / revealDuration;
+            var currentScore = Mathf.FloorToInt(Mathf.Lerp(0, totalScore, t));
+
+            totalScoreValue.text = $"{currentScore:D8}";
             yield return null;
         }
 
-        totalScoreValue.text = $"{totalScore:00000000}";
-        Debug.Log("코루틴 끝");
+        totalScoreValue.text = $"{totalScore:D8}";
+        Debug.Log("코루틴 자동 종료");
     }
 
     public override void Close()
     {
         base.Close();
+        StopCoroutine(coroutine);
+        Debug.Log("코루틴 명시적 종료");
     }
 
     public void OnNext()

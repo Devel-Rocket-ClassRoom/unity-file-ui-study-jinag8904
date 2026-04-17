@@ -1435,6 +1435,7 @@ MonoBehaviour:
   rightStatValue: {fileID: 1154461662}
   totalScoreValue: {fileID: 1424291177}
   nextButton: {fileID: 465272432}
+  statCount: 3
 --- !u!1001 &1154461660
 PrefabInstance:
   m_ObjectHideFlags: 0
