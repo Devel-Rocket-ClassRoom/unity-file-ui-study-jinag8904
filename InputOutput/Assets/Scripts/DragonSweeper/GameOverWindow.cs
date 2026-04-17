@@ -77,11 +77,13 @@ public class GameOverWindow : GenericWindow
 
         yield return new WaitForSeconds(revealDelay);
 
-        float t = 0f;
+        var t = 0f;
+        var elapsed = 0f;
 
         while (t < 1f)
         {
-            t += Time.deltaTime / revealDuration;
+            elapsed += Time.deltaTime;
+            t = elapsed / revealDuration;
             var currentScore = Mathf.FloorToInt(Mathf.Lerp(0, totalScore, t));
 
             totalScoreValue.text = $"{currentScore:D8}";
@@ -89,18 +91,16 @@ public class GameOverWindow : GenericWindow
         }
 
         totalScoreValue.text = $"{totalScore:D8}";
-        Debug.Log("코루틴 자동 종료");
     }
 
     public override void Close()
     {
         base.Close();
         StopCoroutine(coroutine);
-        Debug.Log("코루틴 명시적 종료");
     }
 
     public void OnNext()
     {
-        windowManager.Open(0);
+        windowManager.Open(2);
     }
 }
