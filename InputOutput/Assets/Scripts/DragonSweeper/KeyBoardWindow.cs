@@ -6,14 +6,14 @@ using System.Collections.Generic;
 public class KeyBoardWindow : GenericWindow
 {
     // 이름 적는 곳 (출력할 곳)
-    public TextMeshProUGUI typing;
+    public TextMeshProUGUI typingField;
 
-    // 키보드 버튼들
+    // 알파벳 버튼
     public Button[] keys;
 
     // 이름 타이핑
     private List<string> strings;
-    public int lenLimit = 6;
+    public int lenLimit = 7;
     public string username; // 최종 결정 저장
 
     // 아래 버튼 셋
@@ -55,12 +55,12 @@ public class KeyBoardWindow : GenericWindow
     {
         if (isCursorOn)
         {
-            typing.text = $"{string.Join("", strings)}";
+            typingField.text = $"{string.Join("", strings)}";
         }
 
         else
         {
-            typing.text = $"{typing.text}_";
+            typingField.text = $"{typingField.text}_";
         }
     }
 
@@ -68,17 +68,12 @@ public class KeyBoardWindow : GenericWindow
     {
         base.Open();
 
-        typing.text = "_";
+        typingField.text = "_";
         strings = new();
         username = string.Empty;
 
         isCursorOn = true;
         isCursorInvisible = false;
-    }
-
-    public override void Close()
-    {
-        base.Close();
     }
 
     public void OnClick(string alpha)
@@ -88,7 +83,7 @@ public class KeyBoardWindow : GenericWindow
             strings.Add(alpha);
         }
 
-        typing.text = string.Join("", strings);
+        typingField.text = string.Join("", strings);
         if (strings.Count == lenLimit)
         {
             isCursorInvisible = true;
@@ -100,7 +95,7 @@ public class KeyBoardWindow : GenericWindow
         if (strings.Count > 0)
         {
             strings.RemoveAt(strings.Count -1);
-            typing.text = string.Join("", strings);
+            typingField.text = string.Join("", strings);
 
             isCursorInvisible = false;
         }
@@ -109,7 +104,7 @@ public class KeyBoardWindow : GenericWindow
     public void OnDelete() // 전부 삭제
     {
         strings.Clear();
-        typing.text = string.Empty;
+        typingField.text = string.Empty;
         
         isCursorInvisible = false;
     }
