@@ -520,7 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe915cb14b63af945be839048d6f8b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  prefab: {fileID: 4576717336085390940, guid: d600cb8166b914849b4df80b2453a773, type: 3}
+  InvenSlotPrefab: {fileID: 4576717336085390940, guid: d600cb8166b914849b4df80b2453a773, type: 3}
   scrollRect: {fileID: 574193013}
 --- !u!1 &772323763
 GameObject:
