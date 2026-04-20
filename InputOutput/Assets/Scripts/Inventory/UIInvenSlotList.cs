@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UIInvenSlotList : MonoBehaviour
 {
-    public UIInvenSlot prefab;
+    public UIInvenSlot InvenSlotPrefab;
     public ScrollRect scrollRect;
 
     private void Update()
@@ -13,7 +13,7 @@ public class UIInvenSlotList : MonoBehaviour
             for (int i = 0; i < 10; i++)
             {
                 var randSaveItemData = SaveItemData.GetRandomItem();
-                var newInven = Instantiate(prefab, scrollRect.content);
+                var newInven = Instantiate(InvenSlotPrefab, scrollRect.content);
                 newInven.SetItem(randSaveItemData);
             }
         }
