@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemData
@@ -25,6 +23,8 @@ public class ItemTable : DataTable
 {
     private readonly Dictionary<string, ItemData> table = new();
 
+    private List<string> keyList;
+
     public override void Load(string fileName)
     {
         table.Clear();
@@ -41,6 +41,8 @@ public class ItemTable : DataTable
             else
                 Debug.LogError("아이템 아이디 중복");            
         }
+
+        keyList = table.Keys.ToList();
     }
 
     public ItemData Get(string id)
@@ -61,5 +63,10 @@ public class ItemTable : DataTable
         var randomPair = table.ElementAt(index);
 
         return randomPair.Key;
+    }
+
+    public ItemData GetRandom()
+    {
+        return Get(keyList[UnityEngine.Random.Range(0, keyList.Count)]);
     }
 }

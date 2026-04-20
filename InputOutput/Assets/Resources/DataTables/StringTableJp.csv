@@ -24,3 +24,10 @@ Class,クラス
 Warrior,転写
 Archer,射手
 Healer,ヒーラー
+NAME,Name
+TYPE,Type
+VALUE,Value
+COST,Cost
+WEAPON,Weapon
+EQUIP,Equip
+CONSUMABLE,Consumable

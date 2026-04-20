@@ -16,10 +16,11 @@ public class SaveLoadTest1 : MonoBehaviour
             Debug.Log(SaveLoadManager.Data.Name);
             Debug.Log(SaveLoadManager.Data.Gold);
 
-            var itemIDS = SaveLoadManager.Data.ItemIDs;
-            for (int i = 0; i < itemIDS.Count; i++)
+            var itemList = SaveLoadManager.Data.ItemList;
+
+            foreach (var item in itemList)
             {
-                Debug.Log($"{i + 1}번 아이템: {DataTableManager.ItemTable.Get(itemIDS[i])}");
+                Debug.Log($"{item.ItemData.Name}");  // 하나씩 출력
             }
         }
 
@@ -29,7 +30,7 @@ public class SaveLoadTest1 : MonoBehaviour
             { 
                 Name = "TEST1234", 
                 Gold = 4321, 
-                ItemIDs = SaveLoadManager.Data.ItemIDs
+                ItemList = SaveLoadManager.Data.ItemList
             };
 
             SaveLoadManager.Save();
@@ -46,19 +47,20 @@ public class SaveLoadTest1 : MonoBehaviour
             Debug.Log(SaveLoadManager.Data.Name);
             Debug.Log(SaveLoadManager.Data.Gold);
 
-            var itemIDS = SaveLoadManager.Data.ItemIDs;
-            for (int i = 0; i < itemIDS.Count; i++)
+            var itemList = SaveLoadManager.Data.ItemList;
+
+            foreach (var item in itemList)
             {
-                Debug.Log($"{i+1}번 아이템: {DataTableManager.ItemTable.Get(itemIDS[i]).Name}");
+                Debug.Log($"{item.ItemData.Name}");  // 하나씩 출력
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            var newItemId = DataTableManager.ItemTable.GetRandomId();
-            SaveLoadManager.Data.ItemIDs.Add(newItemId);
+            //var newItemId = DataTableManager.ItemTable.GetRandomId();
+            SaveLoadManager.Data.ItemList.Add(new SaveItemData());
 
-            Debug.Log($"아이템 추가: {newItemId}");
+            Debug.Log($"아이템 추가: {SaveLoadManager.Data.ItemList[SaveLoadManager.Data.ItemList.Count -1]}");
         }
     }
 }

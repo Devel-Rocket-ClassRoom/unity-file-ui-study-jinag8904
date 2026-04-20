@@ -53,6 +53,31 @@ public class SaveDataV3 : SaveDataV2
 
     public override SaveData VersionUp()
     {
+        SaveDataV4 data = new();
+        data.Name = Name;
+        data.Gold = Gold;
+
+        foreach(var id in ItemIDs)
+        {
+            SaveItemData itemData = new();
+            itemData.ItemData = DataTableManager.ItemTable.Get(id);
+
+            data.ItemList.Add(itemData);
+        }
+
+        return data;
+    }
+}
+
+[Serializable]
+public class SaveDataV4 : SaveDataV2
+{
+    public List<SaveItemData> ItemList = new();
+
+    public SaveDataV4() => Version = 4;
+
+    public override SaveData VersionUp()
+    {
         throw new NotImplementedException();
     }
 }

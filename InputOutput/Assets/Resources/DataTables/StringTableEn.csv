@@ -24,3 +24,10 @@ Class,Class
 Warrior,Warrior
 Archer,Archer
 Healer,Healer
+NAME,Name
+TYPE,Type
+VALUE,Value
+COST,Cost
+WEAPON,Weapon
+EQUIP,Equip
+CONSUMABLE,Consumable
