@@ -185,7 +185,7 @@ public class UiCharacterSlotList : MonoBehaviour
 
         if (saveCharacterData.WeaponItemData != null)
         {
-            SetEquip(saveCharacterData.WeaponItemData);
+            SetWeapon(saveCharacterData.WeaponItemData);
         }
 
         else
@@ -251,12 +251,10 @@ public class UiCharacterSlotList : MonoBehaviour
     public void SetEquip(SaveItemData equip)
     {
         equipSlot.SetItem(equip);
-        saveCharacterDataList[selectedSlotIndex].EquipItemData = equip;
     }
 
     public void SetWeapon(SaveItemData weapon)
     {
         weaponSlot.SetItem(weapon);
-        saveCharacterDataList[selectedSlotIndex].WeaponItemData = weapon;
     }
 }
