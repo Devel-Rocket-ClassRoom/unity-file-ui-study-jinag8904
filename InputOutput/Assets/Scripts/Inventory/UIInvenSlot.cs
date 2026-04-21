@@ -9,11 +9,11 @@ public class UIInvenSlot : MonoBehaviour
     public Image iconImage;
     public TextMeshProUGUI nameText;
 
-    public SaveItemData saveItemData { get; private set; }
+    public SaveItemData saveItemData { get; set; }
 
     public Button button;
 
-    public void SetEmpty()
+    public virtual void SetEmpty()
     {
         iconImage.sprite = null;
         nameText.text = string.Empty;

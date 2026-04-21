@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 340392096061415692}
   - component: {fileID: 9147962333958053541}
   m_Layer: 5
-  m_Name: Value
+  m_Name: AttackPower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBC38\uB958: "
+  m_text: "\uACF5\uACA9\uB825: "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 7615700704513701400}
   - component: {fileID: 3803020302583847742}
   m_Layer: 5
-  m_Name: Cost
+  m_Name: DefensePower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uCF54\uC2A4\uD2B8: "
+  m_text: "\uBC29\uC5B4\uB825:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
@@ -822,6 +822,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ea86b2000516b4e9b2eacc08571d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UiCharacterInfo
+  iconImage: {fileID: 1576130197191830346}
+  nameText: {fileID: 9078203050280610555}
+  descText: {fileID: 8583675797200061039}
+  classText: {fileID: 3213470357235767790}
+  attackPowerText: {fileID: 9147962333958053541}
+  defensePowerText: {fileID: 3803020302583847742}
 --- !u!1 &8406356668372577561
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +840,7 @@ GameObject:
   - component: {fileID: 8901777069231190233}
   - component: {fileID: 3213470357235767790}
   m_Layer: 5
-  m_Name: Type
+  m_Name: Class
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -887,7 +893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD0C0\uC785: "
+  m_text: "\uD074\uB798\uC2A4: "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}
   m_sharedMaterial: {fileID: -2253834616945413019, guid: 55aa32ed9e380e34abc92f2c398a3f97, type: 2}

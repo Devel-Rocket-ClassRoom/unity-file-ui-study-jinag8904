@@ -350,4 +350,6 @@ MonoBehaviour:
   slotIndex: -1
   iconImage: {fileID: 4497189683526391299}
   nameText: {fileID: 3117894301357216120}
+  equipSlot: {fileID: 7256264981068111425, guid: 0ff8726fafb3a894295f5203692807ca, type: 3}
+  weaponSlot: {fileID: 1069673397882382773, guid: c237dec17d0d8774f8ec84eb1351f130, type: 3}
   button: {fileID: 3895799801357413535}

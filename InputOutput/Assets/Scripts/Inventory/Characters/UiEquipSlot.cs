@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class UiEquipSlot : UIInvenSlot
 {
-    UIInvenSlotList UIInvenSlotList = new();
+    public UIInvenSlotList UIInvenSlotList;
 
     private void Awake()
     {
         slotIndex = 0;
+    }
+
+    public override void SetEmpty()
+    {
+        base.SetEmpty();
+        nameText.text = "장비";
     }
 
     public void OnClick()
@@ -27,6 +33,8 @@ public class UiEquipSlot : UIInvenSlot
         else
         {
             SetItem(item);
+
+            
         }
     }
 }

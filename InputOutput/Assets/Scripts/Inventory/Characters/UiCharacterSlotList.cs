@@ -10,6 +10,9 @@ using UnityEngine.UI;
 
 public class UiCharacterSlotList : MonoBehaviour
 {
+    public UiEquipSlot equipSlot;
+    public UiWeaponSlot weaponSlot;
+
     public enum SortingOptions
     {
         CreationTimeAscending,
@@ -169,6 +172,26 @@ public class UiCharacterSlotList : MonoBehaviour
     private void OnSelectSlot(SaveCharacterData saveCharacterData)
     {
         uiCharacterInfo.SetSaveCharacterData(saveCharacterData);
+
+        if (saveCharacterData.EquipItemData != null)
+        {
+            SetEquip(saveCharacterData.EquipItemData);
+        }
+
+        else
+        {
+            equipSlot.SetEmpty();
+        }
+
+        if (saveCharacterData.WeaponItemData != null)
+        {
+            SetEquip(saveCharacterData.WeaponItemData);
+        }
+
+        else
+        {
+            weaponSlot.SetEmpty();
+        }
     }
 
     public void SetSaveCharacterDataList(List<SaveCharacterData> source)
@@ -223,5 +246,17 @@ public class UiCharacterSlotList : MonoBehaviour
         {
             Debug.Log("저장 중 예외 발생");
         }
+    }
+
+    public void SetEquip(SaveItemData equip)
+    {
+        equipSlot.SetItem(equip);
+        saveCharacterDataList[selectedSlotIndex].EquipItemData = equip;
+    }
+
+    public void SetWeapon(SaveItemData weapon)
+    {
+        weaponSlot.SetItem(weapon);
+        saveCharacterDataList[selectedSlotIndex].WeaponItemData = weapon;
     }
 }

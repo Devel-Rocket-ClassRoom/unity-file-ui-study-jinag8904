@@ -237,6 +237,8 @@ public class UIInvenSlotList : MonoBehaviour
     {
         if (selectedSlotIndex == -1) return null;
 
+        Debug.Log(selectedSlotIndex);
+        Debug.Log(uiSlotList.Count);
         return uiSlotList[selectedSlotIndex].saveItemData;
     }
 }

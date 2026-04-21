@@ -9,6 +9,9 @@ public class SaveCharacterData
 
     public CharacterData CharacterData { get; set; }
 
+    public SaveItemData EquipItemData { get; set; }
+    public SaveItemData WeaponItemData { get; set; }
+
     public SaveCharacterData()
     {
         instanceId = Guid.NewGuid();
