@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class UiWeaponSlot : MonoBehaviour
+public class UiWeaponSlot : UIInvenSlot
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        slotIndex = 1;
     }
 }

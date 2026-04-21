@@ -92,7 +92,7 @@ public class UIInvenSlotList : MonoBehaviour
         }
     }
 
-    private int selectedSlotIndex = -1;
+    public static int selectedSlotIndex = -1;
 
     public UnityEvent onUpdateSlots;
     public UnityEvent<SaveItemData> onSelectSlot;
@@ -231,5 +231,12 @@ public class UIInvenSlotList : MonoBehaviour
         {
             Debug.Log("저장 중 예외 발생");
         }
+    }
+
+    public SaveItemData GetSelectedItem()
+    {
+        if (selectedSlotIndex == -1) return null;
+
+        return uiSlotList[selectedSlotIndex].saveItemData;
     }
 }

@@ -1,16 +1,32 @@
 using UnityEngine;
 
-public class UiEquipSlot : MonoBehaviour
+public class UiEquipSlot : UIInvenSlot
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    UIInvenSlotList UIInvenSlotList = new();
+
+    private void Awake()
     {
-        
+        slotIndex = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClick()
     {
-        
+        if (saveItemData != null)
+        {
+            SetEmpty();
+            return;
+        }
+
+        var item = UIInvenSlotList.GetSelectedItem();
+
+        if (item == null || item.ItemData.Type != ItemTypes.Equip)
+        {
+            return;
+        }
+
+        else
+        {
+            SetItem(item);
+        }
     }
 }
