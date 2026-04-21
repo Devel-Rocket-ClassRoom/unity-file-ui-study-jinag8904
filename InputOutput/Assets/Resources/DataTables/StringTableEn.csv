@@ -31,3 +31,7 @@ COST,Cost
 WEAPON,Weapon
 EQUIP,Equip
 CONSUMABLE,Consumable
+SAVE,Save
+LOAD,Load
+CREATEITEM,Create Item
+DELETEITEM,Delete Item

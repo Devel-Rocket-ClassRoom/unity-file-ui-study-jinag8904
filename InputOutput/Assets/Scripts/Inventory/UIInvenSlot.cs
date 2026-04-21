@@ -4,26 +4,14 @@ using UnityEngine.UI;
 
 public class UIInvenSlot : MonoBehaviour
 {
+    public int slotIndex = -1;
+
     public Image iconImage;
     public TextMeshProUGUI nameText;
 
     public SaveItemData saveItemData { get; private set; }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Alpha1))
-    //    {
-    //        SetEmpty();
-    //    }
-
-    //    if (Input.GetKeyDown(KeyCode.Alpha2))
-    //    {
-    //        var saveItemData = new SaveItemData();
-    //        saveItemData.ItemData = DataTableManager.ItemTable.Get("Item1");
-
-    //        SetItem(saveItemData);
-    //    }
-    //}
+    public Button button;
 
     public void SetEmpty()
     {

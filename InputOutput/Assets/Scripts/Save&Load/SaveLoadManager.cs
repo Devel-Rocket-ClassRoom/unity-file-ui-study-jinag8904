@@ -27,6 +27,11 @@ public static class SaveLoadManager
         TypeNameHandling = TypeNameHandling.All
     };
 
+    static SaveLoadManager()
+    {
+        Load();
+    }
+
     private static string GetSaveFilePath(int slot)
     {
         return GetSaveFilePath(slot, Mode);
@@ -86,7 +91,10 @@ public static class SaveLoadManager
         if (slot < 0 || slot >= SaveFileNames.Length || !Directory.Exists(SaveDirPath)) return false;
 
         string path = GetSaveFilePath(0, mode);
-        if (!File.Exists(path)) return false;
+        if (!File.Exists(path))
+        {
+            return Save();
+        }
 
         try
         {

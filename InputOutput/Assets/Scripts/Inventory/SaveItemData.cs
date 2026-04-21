@@ -3,7 +3,7 @@ using System;
 
 public class SaveItemData
 {
-    public Guid instnaceId { get; set; }
+    public Guid instanceId { get; set; }
 
     [JsonConverter(typeof(ItemDataConverter))]
     public ItemData ItemData { get; set; }   // reference
@@ -12,7 +12,7 @@ public class SaveItemData
 
     public SaveItemData()
     {
-        instnaceId = Guid.NewGuid();
+        instanceId = Guid.NewGuid();
         creationTime = DateTime.Now;
     }
 
@@ -21,5 +21,10 @@ public class SaveItemData
         SaveItemData newItem = new() { ItemData = DataTableManager.ItemTable.GetRandom() };
         //newItem.ItemData = DataTableManager.ItemTable.GetRandom();
         return newItem;
+    }
+
+    public override string ToString()
+    {
+        return $"instanceId: {instanceId}\ncreationTime: {creationTime}\nItemData.Id: {ItemData.Id}";
     }
 }

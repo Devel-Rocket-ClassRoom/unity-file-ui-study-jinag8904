@@ -13,19 +13,6 @@ public class UIItemInfo : MonoBehaviour
     public TextMeshProUGUI valueText;
     public TextMeshProUGUI costText;
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Alpha1))
-    //    {
-    //        SetEmpty();
-    //    }
-
-    //    if (Input.GetKeyDown(KeyCode.Alpha2))
-    //    {
-    //        SetSaveItemData(SaveItemData.GetRandomItem());
-    //    }
-    //}
-
     public void SetEmpty()
     {
         iconImage.sprite = null;
