@@ -73,6 +73,7 @@ public class SaveDataV3 : SaveDataV2
 public class SaveDataV4 : SaveDataV2
 {
     public List<SaveItemData> ItemList = new();
+    public List<SaveCharacterData> CharacterList = new();
 
     public SaveDataV4() => Version = 4;
 

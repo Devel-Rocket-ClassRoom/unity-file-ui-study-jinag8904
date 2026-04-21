@@ -15,9 +15,6 @@ public class UIPanelInventory : MonoBehaviour
     public TextMeshProUGUI createBtnText;
     public TextMeshProUGUI deleteBtnText;
 
-    public TMP_Dropdown sortingDropdown;
-    public TMP_Dropdown filteringDropdown;
-
     private void OnEnable()
     {
         OnLoad();
@@ -41,9 +38,9 @@ public class UIPanelInventory : MonoBehaviour
             DataTableManager.StringTable.Get("VALUEASCENDING")
         };
 
-        for (int i = 0; i < sortingDropdown.options.Count; i++)
+        for (int i = 0; i < sorting.options.Count; i++)
         {
-            sortingDropdown.options[i].text = sortingOptions[i];
+            sorting.options[i].text = sortingOptions[i];
         }
 
         List<string> filteringOptions = new()
@@ -55,9 +52,9 @@ public class UIPanelInventory : MonoBehaviour
             DataTableManager.StringTable.Get("NONCONSUMABLE")
         };
 
-        for (int i = 0; i < filteringDropdown.options.Count; i++)
+        for (int i = 0; i < filtering.options.Count; i++)
         {
-            filteringDropdown.options[i].text = filteringOptions[i];
+            filtering.options[i].text = filteringOptions[i];
         }
     }
 

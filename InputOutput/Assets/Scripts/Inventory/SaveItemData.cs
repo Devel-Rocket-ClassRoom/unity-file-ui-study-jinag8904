@@ -19,7 +19,6 @@ public class SaveItemData
     public static SaveItemData GetRandomItem()
     {
         SaveItemData newItem = new() { ItemData = DataTableManager.ItemTable.GetRandom() };
-        //newItem.ItemData = DataTableManager.ItemTable.GetRandom();
         return newItem;
     }
 

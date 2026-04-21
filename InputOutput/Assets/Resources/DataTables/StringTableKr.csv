@@ -20,11 +20,12 @@ Character3Desc,그의 이름은 로이드.
 Character4Desc,그의 이름은 게일.
 AP,공격력
 DP,방어력
-Class,클래스
-Warrior,전사
-Archer,궁수
-Healer,치유사
+CLASS,클래스
+WARRIOR,전사
+ARCHER,궁수
+HEALER,치유사
 NAME,이름
+DESC,설명
 TYPE,타입
 VALUE,밸류
 COST,코스트

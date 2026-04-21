@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
@@ -22,6 +23,7 @@ public class CharacterData
 public class CharacterTable : DataTable
 {
     private readonly Dictionary<string, CharacterData> table = new();
+    private List<string> keyList;
 
     public override void Load(string fileName)
     {
@@ -39,6 +41,8 @@ public class CharacterTable : DataTable
             else
                 Debug.LogError("캐릭터 아이디 중복");
         }
+
+        keyList = table.Keys.ToList();
     }
 
     public CharacterData Get(string id)
@@ -50,5 +54,19 @@ public class CharacterTable : DataTable
         }
 
         return table[id];
+    }
+
+    public string GetRandomId()
+    {
+        System.Random rand = new();
+        int index = rand.Next(table.Count);
+        var randomPair = table.ElementAt(index);
+
+        return randomPair.Key;
+    }
+
+    public CharacterData GetRandom()
+    {
+        return Get(keyList[UnityEngine.Random.Range(0, keyList.Count)]);
     }
 }

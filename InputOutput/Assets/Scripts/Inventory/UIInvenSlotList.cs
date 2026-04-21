@@ -58,7 +58,6 @@ public class UIInvenSlotList : MonoBehaviour
     public UIItemInfo uiItemInfo;
 
     private List<UIInvenSlot> uiSlotList = new();
-
     private List<SaveItemData> saveItemDataList = new();    
 
     private SortingOptions sorting = SortingOptions.CreationTimeAscending;
