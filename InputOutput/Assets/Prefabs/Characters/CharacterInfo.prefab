@@ -156,7 +156,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 1.5
+  m_FlexibleHeight: -1
   m_LayoutPriority: 1
 --- !u!1 &1425647960748763420
 GameObject:
@@ -828,6 +828,8 @@ MonoBehaviour:
   classText: {fileID: 3213470357235767790}
   attackPowerText: {fileID: 9147962333958053541}
   defensePowerText: {fileID: 3803020302583847742}
+  equipSlot: {fileID: 0}
+  weaponSlot: {fileID: 0}
 --- !u!1 &8406356668372577561
 GameObject:
   m_ObjectHideFlags: 0

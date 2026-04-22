@@ -15,12 +15,12 @@ public class UIInvenSlot : MonoBehaviour
 
     public virtual void SetEmpty()
     {
-        iconImage.sprite = null;
+        iconImage.sprite = Resources.Load<Sprite>($"Icon/Icon_Close01");
         nameText.text = string.Empty;
         saveItemData = null;
     }
 
-    public void SetItem(SaveItemData data)
+    public virtual void SetItem(SaveItemData data)
     {
         saveItemData = data;
 

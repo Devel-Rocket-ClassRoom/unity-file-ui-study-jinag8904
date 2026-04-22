@@ -10,9 +10,6 @@ using UnityEngine.UI;
 
 public class UiCharacterSlotList : MonoBehaviour
 {
-    public UiEquipSlot equipSlot;
-    public UiWeaponSlot weaponSlot;
-
     public enum SortingOptions
     {
         CreationTimeAscending,
@@ -30,7 +27,7 @@ public class UiCharacterSlotList : MonoBehaviour
     }
 
     public readonly Comparison<SaveCharacterData>[] comparisons =
-{
+    {
         (lhs, rhs) => lhs.creationTime.CompareTo(rhs.creationTime),
         (lhs, rhs) => rhs.creationTime.CompareTo(lhs.creationTime),
         (lhs, rhs) => lhs.CharacterData.StringName.CompareTo(rhs.CharacterData.StringName),
@@ -172,26 +169,6 @@ public class UiCharacterSlotList : MonoBehaviour
     private void OnSelectSlot(SaveCharacterData saveCharacterData)
     {
         uiCharacterInfo.SetSaveCharacterData(saveCharacterData);
-
-        if (saveCharacterData.EquipItemData != null)
-        {
-            SetEquip(saveCharacterData.EquipItemData);
-        }
-
-        else
-        {
-            equipSlot.SetEmpty();
-        }
-
-        if (saveCharacterData.WeaponItemData != null)
-        {
-            SetWeapon(saveCharacterData.WeaponItemData);
-        }
-
-        else
-        {
-            weaponSlot.SetEmpty();
-        }
     }
 
     public void SetSaveCharacterDataList(List<SaveCharacterData> source)
@@ -246,15 +223,5 @@ public class UiCharacterSlotList : MonoBehaviour
         {
             Debug.Log("저장 중 예외 발생");
         }
-    }
-
-    public void SetEquip(SaveItemData equip)
-    {
-        equipSlot.SetItem(equip);
-    }
-
-    public void SetWeapon(SaveItemData weapon)
-    {
-        weaponSlot.SetItem(weapon);
     }
 }

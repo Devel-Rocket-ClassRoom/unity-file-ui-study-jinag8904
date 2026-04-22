@@ -9,8 +9,8 @@ public class SaveCharacterData
 
     public CharacterData CharacterData { get; set; }
 
-    public SaveItemData EquipItemData { get; set; }
-    public SaveItemData WeaponItemData { get; set; }
+    public SaveItemData EquipItem { get; set; }
+    public SaveItemData WeaponItem { get; set; }
 
     public SaveCharacterData()
     {

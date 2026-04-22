@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBE48 \uC2AC\uB86F"
+  m_text: "\uBB34\uAE30"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2bc93ca84079eb942b6b5bb65e26abdf, type: 2}
   m_sharedMaterial: {fileID: 3677978402969192886, guid: 2bc93ca84079eb942b6b5bb65e26abdf, type: 2}
@@ -259,7 +259,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1861017179657378264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1069673397882382773}
+        m_TargetAssemblyTypeName: UiWeaponSlot, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1069673397882382773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +288,7 @@ MonoBehaviour:
   iconImage: {fileID: 1830901719829909019}
   nameText: {fileID: 1185383572211856110}
   button: {fileID: 4009850366089187001}
+  UIInvenSlotList: {fileID: 0}
 --- !u!1 &3867026845581611353
 GameObject:
   m_ObjectHideFlags: 0

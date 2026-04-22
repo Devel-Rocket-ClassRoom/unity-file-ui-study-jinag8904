@@ -15,6 +15,19 @@ public class UiEquipSlot : UIInvenSlot
         nameText.text = "장비";
     }
 
+    public override void SetItem(SaveItemData saveChData)
+    {
+        if (saveChData != null)
+        {
+            base.SetItem(saveChData);
+        }
+
+        else
+        {
+            SetEmpty();
+        }
+    }
+
     public void OnClick()
     {
         if (saveItemData != null)
@@ -32,9 +45,7 @@ public class UiEquipSlot : UIInvenSlot
 
         else
         {
-            SetItem(item);
-
-            
+            SetItem(item);            
         }
     }
 }

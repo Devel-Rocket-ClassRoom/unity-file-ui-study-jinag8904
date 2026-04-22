@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBE48 \uC2AC\uB86F"
+  m_text: "\uC7A5\uBE44"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2bc93ca84079eb942b6b5bb65e26abdf, type: 2}
   m_sharedMaterial: {fileID: 3677978402969192886, guid: 2bc93ca84079eb942b6b5bb65e26abdf, type: 2}
@@ -288,6 +288,7 @@ MonoBehaviour:
   iconImage: {fileID: 3575866227157540795}
   nameText: {fileID: 7458844451263520077}
   button: {fileID: 2302942402394740250}
+  UIInvenSlotList: {fileID: 0}
 --- !u!1 &5527679202767538406
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,19 @@ public class UiWeaponSlot : UIInvenSlot
         nameText.text = "무기";
     }
 
+    public override void SetItem(SaveItemData saveChData)
+    {
+        if (saveChData != null)
+        {
+            base.SetItem(saveChData);
+        }
+
+        else
+        {
+            SetEmpty();
+        }
+    }
+
     public void OnClick()
     {
         if (saveItemData != null)
