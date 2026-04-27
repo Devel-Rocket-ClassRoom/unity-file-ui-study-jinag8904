@@ -47,7 +47,7 @@ public class UiCharacterSlotList : MonoBehaviour
 
     public UiCharacterInfo uiCharacterInfo;
 
-    private List<UiCharacterSlot> uiSlotList = new();
+    public List<UiCharacterSlot> uiSlotList = new();
     private List<SaveCharacterData> saveCharacterDataList = new();
 
     private SortingOptions sorting = SortingOptions.CreationTimeAscending;
@@ -82,7 +82,7 @@ public class UiCharacterSlotList : MonoBehaviour
         }
     }
 
-    private int selectedSlotIndex = -1;
+    public int selectedSlotIndex = -1;
 
     public UnityEvent onUpdateSlots;
     public UnityEvent<SaveCharacterData> onSelectSlot;

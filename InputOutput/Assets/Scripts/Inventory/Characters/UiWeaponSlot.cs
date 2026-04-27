@@ -3,6 +3,7 @@ using UnityEngine;
 public class UiWeaponSlot : UIInvenSlot
 {
     public UIInvenSlotList UIInvenSlotList;
+    public UiCharacterInfo characterInfo;
 
     private void Awake()
     {
@@ -20,11 +21,13 @@ public class UiWeaponSlot : UIInvenSlot
         if (saveChData != null)
         {
             base.SetItem(saveChData);
+            characterInfo.SaveWeaponItem();
         }
 
         else
         {
             SetEmpty();
+            characterInfo.ClearWeaponItem();
         }
     }
 
@@ -33,6 +36,7 @@ public class UiWeaponSlot : UIInvenSlot
         if (saveItemData != null)
         {
             SetEmpty();
+            characterInfo.ClearWeaponItem();
             return;
         }
 
@@ -46,6 +50,7 @@ public class UiWeaponSlot : UIInvenSlot
         else
         {
             SetItem(item);
+            characterInfo.SaveWeaponItem();
         }
     }
 }

@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class UiEquipSlot : UIInvenSlot
 {
-    public UIInvenSlotList UIInvenSlotList;
+    public UIInvenSlotList uiInvenSlotList;
+    public UiCharacterInfo characterInfo;
 
     private void Awake()
     {
@@ -20,11 +21,13 @@ public class UiEquipSlot : UIInvenSlot
         if (saveChData != null)
         {
             base.SetItem(saveChData);
+            characterInfo.SaveEquipItem();
         }
 
         else
         {
             SetEmpty();
+            characterInfo.ClearEquipItem();
         }
     }
 
@@ -33,10 +36,11 @@ public class UiEquipSlot : UIInvenSlot
         if (saveItemData != null)
         {
             SetEmpty();
+            characterInfo.ClearEquipItem();
             return;
         }
 
-        var item = UIInvenSlotList.GetSelectedItem();
+        var item = uiInvenSlotList.GetSelectedItem();
 
         if (item == null || item.ItemData.Type != ItemTypes.Equip)
         {
@@ -46,6 +50,7 @@ public class UiEquipSlot : UIInvenSlot
         else
         {
             SetItem(item);            
+            characterInfo.SaveEquipItem();
         }
     }
 }

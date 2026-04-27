@@ -2041,7 +2041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2035570771044076747, guid: df583fa9e4aa2df45a71a20ca427b2c9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2035570771044076747, guid: df583fa9e4aa2df45a71a20ca427b2c9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2849,8 +2849,10 @@ MonoBehaviour:
   CharacterSlotPrefab: {fileID: 6788388568699150569, guid: 7dbbdb59f4614d546805d3a8bde3fac6, type: 3}
   scrollRect: {fileID: 1135707528}
   uiCharacterInfo: {fileID: 6801055921415636231}
+  uiSlotList: []
   sortingDropdown: {fileID: 714617948}
   filteringDropdown: {fileID: 1535470135}
+  selectedSlotIndex: -1
   onUpdateSlots:
     m_PersistentCalls:
       m_Calls: []
@@ -5119,7 +5121,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7256264981068111425, guid: 0ff8726fafb3a894295f5203692807ca, type: 3}
+      propertyPath: characterInfo
+      value: 
+      objectReference: {fileID: 6801055921415636231}
+    - target: {fileID: 7256264981068111425, guid: 0ff8726fafb3a894295f5203692807ca, type: 3}
       propertyPath: UIInvenSlotList
+      value: 
+      objectReference: {fileID: 270467803}
+    - target: {fileID: 7256264981068111425, guid: 0ff8726fafb3a894295f5203692807ca, type: 3}
+      propertyPath: uiInvenSlotList
       value: 
       objectReference: {fileID: 270467803}
     m_RemovedComponents: []
@@ -5135,6 +5145,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1987329785}
     m_Modifications:
+    - target: {fileID: 1069673397882382773, guid: c237dec17d0d8774f8ec84eb1351f130, type: 3}
+      propertyPath: characterInfo
+      value: 
+      objectReference: {fileID: 6801055921415636231}
     - target: {fileID: 1069673397882382773, guid: c237dec17d0d8774f8ec84eb1351f130, type: 3}
       propertyPath: UIInvenSlotList
       value: 
@@ -5479,6 +5493,10 @@ PrefabInstance:
       propertyPath: weaponSlot
       value: 
       objectReference: {fileID: 3080493128654759810}
+    - target: {fileID: 6703732002742990425, guid: 634442ef11f4a994c87661f715379ebf, type: 3}
+      propertyPath: uiCharacterSlotList
+      value: 
+      objectReference: {fileID: 1135707531}
     - target: {fileID: 8310073075868047148, guid: 634442ef11f4a994c87661f715379ebf, type: 3}
       propertyPath: m_Name
       value: CharacterInfo

@@ -19,6 +19,8 @@ public class UiCharacterInfo: MonoBehaviour
     public UiEquipSlot equipSlot;
     public UiWeaponSlot weaponSlot;
 
+    public UiCharacterSlotList uiCharacterSlotList;
+
     public void SetEmpty()
     {
         iconImage.sprite = Resources.Load<Sprite>($"Icon/Icon_Close01");
@@ -48,5 +50,27 @@ public class UiCharacterInfo: MonoBehaviour
 
         equipSlot.SetItem(saveCharacterData.EquipItem);
         weaponSlot.SetItem(saveCharacterData.WeaponItem);
+    }
+
+    public void SaveWeaponItem()
+    {
+        uiCharacterSlotList.uiSlotList[uiCharacterSlotList.selectedSlotIndex].saveCharacterData.WeaponItem = weaponSlot.saveItemData;
+    }
+
+    public void ClearWeaponItem()
+    {
+        uiCharacterSlotList.uiSlotList[uiCharacterSlotList.selectedSlotIndex].saveCharacterData.WeaponItem = null;
+    }
+
+    public void SaveEquipItem()
+    {
+        var saveData = uiCharacterSlotList.uiSlotList[uiCharacterSlotList.selectedSlotIndex].saveCharacterData;
+        saveData.EquipItem = equipSlot.saveItemData;
+        //defensePowerText.text = string.Format(FormatStat, DataTableManager.StringTable.Get("DP"), saveData.CharacterData.DefensePower, (saveData.EquipItem == null) ? 0 : saveData.EquipItem.ItemData.Value);
+    }
+
+    public void ClearEquipItem()
+    {
+        uiCharacterSlotList.uiSlotList[uiCharacterSlotList.selectedSlotIndex].saveCharacterData.EquipItem = null;
     }
 }
